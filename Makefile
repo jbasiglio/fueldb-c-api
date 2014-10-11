@@ -1,16 +1,17 @@
-# source files.
-SRC = fueldb.c
+LIB = fueldb.c
  
-OBJ = $(SRC:.c=.o)
+# C++ compiler flags
+CCFLAGS = -O2 -Wall
  
-OUT = libfueldb.a
+# compiler
+CCC = gcc
  
 .SUFFIXES: .c
  
-default: $(OUT)
+default: test
  
-$(OUT): $(OBJ)
-	ar rcs $(OUT) $(OBJ)
+test:
+	$(CCC) $(CCFLAGS) $(LIB) test.c -o test.out
  
 clean:
-	rm -f $(OBJ) $(OUT)
+	rm -f *.out
