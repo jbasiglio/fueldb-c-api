@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Wonderfuel. All rights reserved.
 //
 
-#include "../fueldb.h"
+#include "fueldb.h"
 
 int main(int argc , char *argv[])
 {
